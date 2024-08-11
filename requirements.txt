@@ -2,5 +2,4 @@ pytest
 click
 pylint
 pytest-cov
-locust
 flask

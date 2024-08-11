@@ -27,6 +27,8 @@ jobs:
               uses: actions/setup-python@v1
               with:
                 python-version: 3.10.14
+            - name: Install locust
+              run: pip install locust
             - name: Run Load Test with Locust
               run: locust -f locustfile.py --headless -u 20 -r 5 --runtime 1m --host=https://localhost:5000/add?x=3&y=8 
 
